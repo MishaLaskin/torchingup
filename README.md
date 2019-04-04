@@ -1,4 +1,4 @@
-# README for TorchingUp
+# TorchingUp
 
 # Why TorchingUp Exists
 
