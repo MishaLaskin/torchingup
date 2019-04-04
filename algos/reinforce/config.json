@@ -1,0 +1,8 @@
+{
+  "env_name": "InvertedPendulum-v2",
+  "pi_lr": 3e-2,
+  "gamma": 0.99,
+  "epochs": 100,
+  "steps_per_epoch": 5000,
+  "h_dim": 64
+}

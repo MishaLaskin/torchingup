@@ -1,0 +1,14 @@
+{
+  "env_name" : "Pendulum-v0",
+  "render": 0,
+  "epochs":50,
+  "steps_per_epoch":1000,
+  "max_steps":500,
+  "batch_size":64,
+  "capacity":100000,
+  "h_dim" : 128,
+  "pi_lr" : 1e-4,
+  "q_lr":1e-3,
+  "gamma" : 0.99,
+  "tau":1e-2
+}

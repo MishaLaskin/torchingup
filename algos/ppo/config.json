@@ -1,0 +1,16 @@
+{
+  "env_name" : "InvertedPendulum-v2",
+  "render": 0,
+  "log_interval" : 10,
+  "h_dim" : 64,
+  "eps_per_update" : 10,
+  "pi_lr" : 0.0007,
+  "v_lr" : 0.0007,
+  "gamma" : 0.99,
+  "lam":0.95,
+  "n_updates" : 10,
+  "eps_clip" : 0.2,
+  "random_seed" : 0,
+  "total_episodes":300,
+  "use_gae":1
+}

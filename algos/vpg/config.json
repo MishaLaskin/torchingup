@@ -1,0 +1,10 @@
+{
+  "env_name": "CartPole-v0",
+  "pi_lr": 3e-2,
+  "vf_lr": 1e-1,
+  "gamma": 0.99,
+  "lam": 0.95,
+  "n_iters": 100,
+  "steps_per_epoch": 5000,
+  "h_dim": 64
+}
