@@ -40,6 +40,6 @@ The policies used in this example depend on whether the action space is discrete
 10. >>> >> >> reset episode buffer and reset environment
 11. >>> >> if epoch is done:
 12. >>> >> >> get trajectories from epoch buffer
-13. >>> >> >> calculate log_likelihood(all_obs,all_acts)
-14. >>> >> >> compute policy loss `loss_pi = - mean(log_prob_t * R_t)`
+13. >>> >> >> calculate `log_prob(all_obs,all_acts)`
+14. >>> >> >> compute policy loss `loss_pi = - mean(log_prob * R)`
 15. >>> >> >> perform on step of optimization on policy network `pi`
