@@ -7,7 +7,7 @@ The agent collects `N` trajectories `tau_{j=1,...,N}` by acting according to `pi
 
 ## Part 2: Optimization
 
-Optimization - after rollout, we optimize parameters `theta` to maximize the likelihood of the policy `\pi` weighed by the discounted rewards-to-go `R_t`. The gradient update is defined as
+Optimization - after rollout, we optimize parameters `theta` to maximize the likelihood of the policy `pi` weighed by the discounted rewards-to-go `R_t`. The gradient update is defined as
 
 `theta_{k+1}=theta_k - lr * grad_theta loss`
 
