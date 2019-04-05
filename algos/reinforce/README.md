@@ -30,16 +30,16 @@ The policies used in this example depend on whether the action space is discrete
 
 1. Initialize the buffer `B`, logger, actor policy `pi`, and optimizer
 2. for `epoch` in `epochs`:
-3. - for `t` in `steps_per_epoch`:
-4. -- observe state `obs`
-5. -- given `obs`, sample action `act` from policy `pi`
-6. -- perform action `act` and observe next state `obs2`, reward `rew`, and done `done`
-7. -- store `(obs,act,rew)` in episode buffer
-8. -- if done:
-9. --- store trajectory (the episode buffer) in epoch buffer `B`
-10. --- reset episode buffer and reset environment
-11. -- if epoch is done:
-12. --- get trajectories from epoch buffer
-13. --- calculate log_likelihood(all_obs,all_acts)
-14. --- compute policy loss `loss_pi = - mean(log_prob_t * R_t)`
-15. --- perform on step of optimization on policy network `pi`
+3. >>> for `t` in `steps_per_epoch`:
+4. >>> >>> observe state `obs`
+5. >>> >>> given `obs`, sample action `act` from policy `pi`
+6. >>> >>> perform action `act` and observe next state `obs2`, reward `rew`, and done `done`
+7. >>> >>> store `(obs,act,rew)` in episode buffer
+8. >>> >>> if done:
+9. >>> >>> >>> store trajectory (the episode buffer) in epoch buffer `B`
+10. >>> >>> >>> reset episode buffer and reset environment
+11. >>> >>> if epoch is done:
+12. >>> >>> >>> get trajectories from epoch buffer
+13. >>> >>> >>> calculate log_likelihood(all_obs,all_acts)
+14. >>> >>> >>> compute policy loss `loss_pi = - mean(log_prob_t * R_t)`
+15. >>> >>> >>> perform on step of optimization on policy network `pi`
