@@ -3,7 +3,7 @@ Implementation of the REINFORCE on-policy algorithm. The REINFORCE algorithm is 
 
 ## Part 1: Rollout
 
-The agent collects `N` trajectories `tau_{j=1,...,N}` by acting according `pi`. A trajectory `tau` consists of `(state,action,reward)` tuples.
+The agent collects `N` trajectories `tau_{j=1,...,N}` by acting according to `pi`. A trajectory `tau` consists of `(state,action,reward)` tuples.
 
 ## Part 2: Optimization
 
