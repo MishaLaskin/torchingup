@@ -36,10 +36,10 @@ The policies used in this example depend on whether the action space is discrete
     3. perform action `act` and observe next state `obs2`, reward `rew`, and done `done`
     4. store `(obs,act,rew)` in episode buffer
     5. if done:
-      1. store trajectory (the episode buffer) in epoch buffer `B`
-      2. reset episode buffer and reset environment
+      - store trajectory (the episode buffer) in epoch buffer `B`
+      - reset episode buffer and reset environment
     6. if epoch is done:
-      1. get trajectories from epoch buffer
-      2. calculate log_likelihood(all_obs,all_acts)
-      3. compute policy loss `loss_pi = - mean(log_prob_t * R_t)`
-      4. perform on step of optimization on policy network `pi`
+      - get trajectories from epoch buffer
+      - calculate log_likelihood(all_obs,all_acts)
+      - compute policy loss `loss_pi = - mean(log_prob_t * R_t)`
+      - perform on step of optimization on policy network `pi`
