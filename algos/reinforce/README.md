@@ -7,7 +7,7 @@ The agent collects `N` trajectories `tau_{j=1,...,N}` by acting according `pi`. 
 
 ## Part 2: Optimization
 
-Optimization - after rollout, we optimize parameters `theta` to maximize the likelihood of the policy `\pi` weighed by the discounted rewards-to-go `R_t`. The gradient update is defined as 
+Optimization - after rollout, we optimize parameters `theta` to maximize the likelihood of the policy `\pi` weighed by the discounted rewards-to-go `R_t`. The gradient update is defined as
 
 `theta_{k+1}=theta_k - lr * grad_theta loss`
 
@@ -19,7 +19,7 @@ where the log probability is
 
 `log_prob_t = log(pi(a_t,s_t))`
 
-Note that the loss is negative because we want to maximize the log likelihood, so we’re performing gradient ascent. REINFORCE is an on-policy algorithm, because optimization is performed on the trajectories $$\tau$$ collected by running the latest policy $$\pi_\theta$$.
+Note that the loss is negative because we want to maximize the log likelihood, so we’re performing gradient ascent. REINFORCE is an on-policy algorithm, because optimization is performed on the trajectories `tau` collected by running the latest policy `pi`.
 
 ## Choice of Policy
 
@@ -28,20 +28,18 @@ The policies used in this example depend on whether the action space is discrete
 # The REINFORCE Algorithm
 
 
-1. Initialize the buffer $$B$$, logger, actor policy $$\pi$$, and optimizer
+1. Initialize the buffer `B`, logger, actor policy `pi`, and optimizer
 2. for `epoch` in `epochs`:
   1. for `t` in `steps_per_epoch`:
     1. observe state `obs`
-    2. given `obs`, sample action `act` from policy $$\pi$$
+    2. given `obs`, sample action `act` from policy `pi`
     3. perform action `act` and observe next state `obs2`, reward `rew`, and done `done`
-    4. store `(obs,act,rew)` in episode buffer 
+    4. store `(obs,act,rew)` in episode buffer
     5. if done:
-      1. store trajectory (the episode buffer) in epoch buffer $$B$$
+      1. store trajectory (the episode buffer) in epoch buffer `B`
       2. reset episode buffer and reset environment
     6. if epoch is done:
       1. get trajectories from epoch buffer
       2. calculate log_likelihood(all_obs,all_acts)
       3. compute policy loss `loss_pi = - mean(log_prob_t * R_t)`
       4. perform on step of optimization on policy network `pi`
-
-
