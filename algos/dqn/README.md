@@ -1,8 +1,6 @@
 # Deep Q Network
 
-Deep Q Nets are one of the simplest variants of off-policy learning. Instead of optimizing
-the policy `pi` directly, Deep Q Networks select actions that maximize `max_a Q`. Recall that
-the `Q` function is the expected return given an initial state `s` and action `a`.
+Deep Q Nets are one of the simplest variants of off-policy learning. They only work in discrete action spaces. Instead of optimizing the policy `pi` directly, Deep Q Networks select actions that maximize `max_a Q`. Recall that the `Q` function is the expected return given an initial state `s` and action `a`.
 
 `Q(s,a) = sum_t gamma^t * r_t |_{s,a}`
 
@@ -21,7 +19,7 @@ Bellman equation. The loss is just the MSE of the Bellman Equation.
 
 `loss_dqn = .5*mean((Q(s,a)-(r+gamma*max_a' Q(s',a')))**2)`
 
-Finally, if the episode is done, then `Q(s',a')=0`, so we modify the loss accodingling
+Finally, if the episode is done, then `Q(s',a')=0`, so we modify the loss accordingly
 
 `loss_dqn = .5*mean((Q(s,a)-(r+gamma*(1-done)*max_a' Q(s',a')))**2)`
 
@@ -74,7 +72,8 @@ For this reason, you'll often see different implementations of off-policy algori
 8. >>>>> perform one step of gradient optimization:
 9. >>>>>>> sample minibatch `m` from `B`, and minimize the Bellman loss
 10. >>>>>>> `loss_dqn = .5*mean((Q(s,a)-(r+gamma*(1-done)*max_a' Q(s',a')))**2)`
-11. >>>>> if done:
-12. >>>>>>> reset environment
-13. >>>>> if epoch is done:
-14. >>>>>>> print average returns and loss values during the epoch
+12. >>>>>>> copy weights from `Q` to `Q_target` if ready for update
+13. >>>>> if done:
+14. >>>>>>> reset environment
+15. >>>>> if epoch is done:
+16. >>>>>>> print average returns and loss values during the epoch
