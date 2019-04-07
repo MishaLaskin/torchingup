@@ -8,6 +8,10 @@ The repository is built with a pedagogical mindset - the point is to help you le
 
 To keep you focused on what’s important - *learning* - we follow a set of code design principles (see below) that are consistent across the various algorithms.
 
+# Supported Algorithms
+
+Currently, TorchingUp supports REINFORCE, VPG, PPO (clipped), DQN, and DDPG. We'll be adding support for TRPO, TD3, Soft Actor-Critic, and HER in the coming weeks.
+
 # Installation
 
 Installation is simple. The code is compatible with Python 3 and has minimal dependencies. Set up a virtual environment called `torchingup` with [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) or [virtualenv](https://virtualenv.pypa.io/en/stable/installation/), and run
