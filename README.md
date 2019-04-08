@@ -38,7 +38,7 @@ Currently TorchingUp supports the following algorithms
 4. Vanilla Policy Gradient (On-Policy)
 5. Proximal Policy Optimization (On-Policy)
 
-With support for TD3, ACER, Soft Actor Critic, and Hindsight Experience Replay coming up.
+With support for TRPO, TD3, ACER, Soft Actor Critic, and Hindsight Experience Replay coming up.
 
 # Code Design
 
