@@ -66,6 +66,6 @@ testpath==0.3
 torch==1.0.1.post2
 tornado==4.4.2
 traitlets==4.3.1
-urllib3==1.24.1
+urllib3==1.26.5
 wcwidth==0.1.7
 widgetsnbextension==1.2.6
