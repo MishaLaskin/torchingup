@@ -8,7 +8,7 @@ chardet==3.0.4
 configparser==3.5.0
 Cython==0.29.2
 decorator==4.0.11
-Django==1.11.18
+Django==2.2.24
 djangorestframework==3.9.1
 entrypoints==0.2.2
 enum34==1.1.6
