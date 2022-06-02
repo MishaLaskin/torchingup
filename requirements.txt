@@ -17,7 +17,7 @@ future==0.17.1
 futures==3.2.0
 glfw==1.7.0
 gym==0.10.9
-html5lib==0.9999999
+html5lib==0.99999999
 idna==2.8
 imageio==2.4.1
 ipykernel==4.5.2
